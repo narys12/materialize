@@ -24,13 +24,19 @@
         main {
             flex: 1 0 auto;
         }
+
+        .signin-modal {
+            max-width: 400px;
+            text-align: center;
+            padding: 0 10px;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <nav class="top-nav grey lighten-1">
+        <nav class="top-nav blue lighten-4">
             <div class="container">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -38,7 +44,7 @@
                 <div class="nav-wrapper center"><a class="page-title">Recent</a></div>
             </div>
         </nav>
-        <ul id="slide-out" class="side-nav fixed">
+        <ul id="slide-out" class="side-nav fixed blue-grey lighten-4">
             <li>
                 <div class="userView">
                     <div class="background">
@@ -47,13 +53,14 @@
                     <a href="#!user"><img class="circle" src="http://lorempixel.com/200/100/"></a>
                     <a href="#!name"><span class="white-text name">Naris Razafimahatratra</span></a>
                     <a href="#!email"><span class="white-text email">naris.razafimahatratra@gmail.com</span></a>
+                    <a class="waves-effect waves-light" href="#sign">Sign in</a>
                 </div>
             </li>
             <li class="search">
                 <nav>
                     <div class="nav-wrapper green lighten-3">
                         <form>
-                            <div class="input-field">
+                            <div class="input-field blue lighten-4">
                                 <input id="search" type="search" required>
                                 <label for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
@@ -137,6 +144,34 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
             </div>
         </div>
+
+        <div id="sign" class="modal signin-modal">
+            <div class="modal-content">
+                <h4>Sign in</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="user_name" type="text" class="validate">
+                                <label for="user_name">User Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row right">
+                                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="page-footer blue lighten-2 s12">
@@ -159,7 +194,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
+                © 2017 Copyright Text
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
@@ -175,14 +210,14 @@
             $('.collapsible').collapsible();
         });
 
-        $('.carousel.carousel-slider').carousel({full_width: true});
-        autoplay()   
+        $('.carousel.carousel-slider').carousel({ full_width: true });
+        autoplay()
         function autoplay() {
             $('.carousel').carousel('next');
             setTimeout(autoplay, 10000);
         }
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.modal').modal();
         });
     </script>
