@@ -4,181 +4,68 @@
 <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @media only screen and (min-width: 992px) {
-            header,
-            main,
-            footer {
-                padding-left: 300px;
-            }
-        }
-        
         body {
             display: flex;
             min-height: 100vh;
             flex-direction: column;
         }
         
+        img {
+            width: 120px;
+            height: auto;
+            margin-top: -7px;
+            margin-bottom: -20px;
+        }
+        
+        nav {
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .menu-item {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        
         main {
             flex: 1 0 auto;
-        }
-
-        .signin-modal {
-            max-width: 400px;
-            text-align: center;
-            padding: 0 10px;
         }
     </style>
 </head>
 
-<body>
+<body class="container">
 
     <header>
-        <nav class="top-nav blue lighten-4">
-            <div class="container">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-            <div class="container">
-                <div class="nav-wrapper center">
-                    <a class="page-title">Recent</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a class="waves-effect waves-green right" href="#sign">Log in</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-        <ul id="slide-out" class="side-nav fixed blue-grey lighten-4">
-            <li>
-                <div class="userView">
-                    <div class="background">
-                        <img src="http://lorempixel.com/500/500/">
-                    </div>
-                    <a href="#!user"><img class="circle" src="http://lorempixel.com/200/100/"></a>
-                    <a href="#!name"><span class="white-text name">Naris Razafimahatratra</span></a>
-                    <a href="#!email"><span class="white-text email">naris.razafimahatratra@gmail.com</span></a>
-                </div>
-            </li>
-            <li class="search">
-                <nav>
-                    <div class="nav-wrapper green lighten-3">
+        <nav>
+            <div class="nav-wrapper white">
+                <ul id="nav-mobile" class="right hide-on-med-and-down menu">
+                    <li>
                         <form>
-                            <div class="input-field blue lighten-4">
+                            <div class="input-field">
                                 <input id="search" type="search" required>
                                 <label for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
                             </div>
                         </form>
-                    </div>
-                </nav>
-            </li>
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">About</a></li>
-        </ul>
-
+                    </li>
+                    <li><a class="menu-item black-text" href="/">Login</a> </li>
+                    <li><a class="menu-item black-text" href="/">Sign up</a> </li>
+                </ul>
+                <a href="#" class="brand-logo center"><img src="https://www.topdesignfirms.com/pub/defaultImage/no-logo-available.jpg"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down menu">
+                    <li><a class="menu-item black-text" href="/">Home</a> </li>
+                    <li><a class="menu-item black-text" href="/">About us</a> </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <div class="carousel carousel-slider center" data-indicators="true">
-            <div class="carousel-fixed-item center">
-                <a class="btn waves-effect white grey-text darken-text-2">button</a>
-            </div>
-            <div class="carousel-item red white-text" href="#one!">
-                <h2>First Panel</h2>
-                <p class="white-text">This is your first panel</p>
-                <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
-            </div>
-            <div class="carousel-item amber white-text" href="#two!">
-                <h2>Second Panel</h2>
-                <p class="white-text">This is your second panel</p>
-                <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
-            </div>
-            <div class="carousel-item green white-text" href="#three!">
-                <h2>Third Panel</h2>
-                <p class="white-text">This is your third panel</p>
-                <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
-            </div>
-            <div class="carousel-item blue white-text" href="#four!">
-                <h2>Fourth Panel</h2>
-                <p class="white-text">This is your fourth panel</p>
-                <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="col s12 m7">
-                <h4 class="header">My Selection</h4>
-                <div class="card horizontal hoverable">
-                    <div class="card-image">
-                        <img src="http://lorempixel.com/100/190/nature/6">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card horizontal hoverable">
-                    <div class="card-image">
-                        <img src="http://lorempixel.com/100/190/nature/6">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-            </div>
-        </div>
-
-        <div id="sign" class="modal signin-modal">
-            <div class="modal-content">
-                <h4>Sign in</h4>
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="user_name" type="text" class="validate">
-                                <label for="user_name">User Name</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="row right">
-                                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
-                                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="page-footer blue lighten-2 s12">
