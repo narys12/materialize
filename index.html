@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 
@@ -20,12 +21,24 @@
             margin-top: -7px;
             margin-bottom: -20px;
         }
+
+        .avatar {
+            width: 45px;
+            height: auto;
+        }
         
         nav {
             margin-top: 10px;
             margin-bottom: 25px;
+            font-family: 'Overpass Mono', monospace;
         }
         
+        .avatar-option {
+            width: intrinsic;           /* Safari/WebKit utilisent un nom non-standard */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content;
+        }
+
         .menu-item {
             padding-left: 20px;
             padding-right: 20px;
@@ -53,8 +66,12 @@
                             </div>
                         </form>
                     </li>
-                    <li><a class="menu-item black-text" href="/">Login</a> </li>
-                    <li><a class="menu-item black-text" href="/">Sign up</a> </li>
+                    <li><a class="menu-item black-text" href="/"><i class="mdi mdi-magnify"></i></a> </li>
+                    <li><a href='#' data-activates='menu-avatar'><i class="material-icons">more_vert</i></a></li>
+                    <ul id='menu-avatar' class='dropdown-content'>
+                        <li class="avatar-option"><a class="black-text" href="/"><i class="mdi mdi-login"></i>Login</a> </li>
+                        <li class="avatar-option"><a class="black-text" href="/"><i class="mdi mdi-logout"></i>Logout</a> </li>
+                    </ul>
                 </ul>
                 <a href="#" class="brand-logo center"><img src="https://www.topdesignfirms.com/pub/defaultImage/no-logo-available.jpg"></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down menu">
